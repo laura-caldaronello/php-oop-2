@@ -1,12 +1,13 @@
 <?php
 
 trait PersonalData {
-    //public $date_of_birth;
+    public $date_of_birth;
     public $email;
 
     function checkDate() {
         if (strlen($this->date_of_birth) != 10) {
-            echo 'errore';
+            $this->date_of_birth = null;
+            throw new Exception('Formato non valido');
         }
         else {
             $day = $this->date_of_birth[0] . $this->date_of_birth[1];
@@ -17,7 +18,8 @@ trait PersonalData {
                $this->date_of_birth = $dateString;
             }
             else { 
-                echo 'altro errore';
+                $this->date_of_birth = null;
+                throw new Exception('Formato non valido');
             }
         }
     }

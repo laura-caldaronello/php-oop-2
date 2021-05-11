@@ -20,4 +20,17 @@ class User {
         $this->email = $_email;
     }
 
+    /* function getId() {
+        return $this->id;
+    }
+    function getMemberFrom() {
+        return $this->member_from;
+    }
+    function getPostNumber() {
+        return $this->post_number;
+    }
+    function getLevel() {
+        return $this->level;
+    } */
+
 }
