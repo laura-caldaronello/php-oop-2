@@ -12,7 +12,9 @@
         ini_set('display_errors',1);
         require __DIR__ . '/User.php';
 
-        $user1 = new User('nick1','data','email');
+        $user1 = new User('nick1','01/10-1010','email');
+        $user1->checkDate();
+
         $user2 = new User('nick2','data','email');
         $user3 = new User('nick3','data','email');
         $user4 = new User('nick4','data','email');
@@ -24,8 +26,6 @@
             $userArray[] = ${'user'.$i};
             $i = $i + 1;
         }
-
-        
 
         foreach($userArray as $user) {
             foreach($user as $property => $value) {
