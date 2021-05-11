@@ -1,0 +1,9 @@
+User
+
+id                  number              auto_inc                    not null                    primary key (unique)
+nickname            string              varchar(50)                 not null                    unique
+member_from         date                date                        not null
+post_number         number              smallint                    null                        default: 0
+date_of_birth       date                date                        null
+email               string              varchar(50)                 not null                    unique
+level               number              tinyint                     not null                    default: 1
